@@ -1,17 +1,12 @@
-function openEnvelope() {
-    document.querySelector('.flap').style.animation = 'openFlap 1s forwards';
-    document.querySelector('.flowers').style.animation = 'showFlowers 1s forwards';
-}
+document.addEventListener("DOMContentLoaded", function() {
+  const envelope = document.getElementById("envelope");
+  const flap = document.querySelector(".envelope-flap");
 
-// Add keyframe animations to styles.css:
-// @keyframes openFlap {
-//     to {
-//         transform: translateY(-100%);
-//     }
-// }
-//
-// @keyframes showFlowers {
-//     to {
-//         top: 50%;
-//     }
-// }
+  setTimeout(() => {
+    flap.style.top = "-80px";
+  }, 1000);
+
+  setTimeout(() => {
+    envelope.classList.add("hidden");
+  }, 2000);
+});
