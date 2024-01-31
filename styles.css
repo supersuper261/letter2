@@ -1,37 +1,50 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f6f6f6;
 }
 
 .envelope {
-  width: 300px;
-  height: 200px;
-  background-color: #fff;
-  border: 2px solid #333;
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #fff;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 1s ease-in-out;
 }
 
-.envelope-flap {
-  width: 0;
-  height: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-top: 40px solid #fff;
-  position: absolute;
-  top: -40px;
-  transition: top 1s ease;
+.heart {
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    width: 40px;
+    height: 40px;
+    background-color: #ff4d4d;
+    clip-path: polygon(
+        50% 0%,
+        100% 30%,
+        90% 70%,
+        50% 100%,
+        10% 70%,
+        0% 30%
+    );
 }
 
-.envelope-content {
-  padding: 20px;
-  text-align: center;
+.letter {
+    display: none;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
 }
 
-.hidden {
-  display: none;
+.envelope.open {
+    transform: translateY(-100px) rotateX(180deg);
+}
+
+.envelope.open .letter {
+    display: block;
 }
