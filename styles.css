@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.envelope-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    border: 2px solid red;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid red;
+}
+
+.letter {
+    padding: 20px;
+}
+
+.flowers {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-image: url('flower.png'); /* Add your flower image */
+    background-size: cover;
+}
