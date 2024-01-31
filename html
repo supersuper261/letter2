@@ -1,26 +1,22 @@
-<div class="love-letter">
-  <div class="envelope">
-    <div class="front">
-      <img src="envelope-front.png" alt="Envelope front">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Love Letter</title>
+</head>
+<body>
+    <div class="envelope-container" onclick="openEnvelope()">
+        <div class="envelope">
+            <div class="flap"></div>
+            <div class="letter">
+                <p>Your love letter content goes here...</p>
+            </div>
+        </div>
+        <div class="flowers" id="flowers"></div>
     </div>
-    <div class="back">
-      <div class="letter">
-        <h1>A Love Letter</h1>
-        <p>
-          Dear [Recipient],
 
-          I wanted to take a moment to tell you how much you mean to me. Every day I spend with you is a gift, and I cherish each and every moment we share.
-
-          Your smile lights up my world, and your kindness and generosity never cease to amaze me. I am so grateful to have you in my life, and I want you to know that I love you more and more each day.
-
-          With all my heart,
-          [Your Name]
-        </p>
-      </div>
-      <div class="flower-1"></div>
-      <div class="flower-2"></div>
-      <div class="flower-3"></div>
-      <div class="flower-4"></div>
-    </div>
-  </div>
-</div>
+    <script src="script.js"></script>
+</body>
+</html>
